@@ -1,0 +1,4 @@
+t1 = sigma customer.customer_name = depositor.customer_name (customer x depositor)
+t2 = sigma account.account_number = depositor.account_number (t1 x account)
+t3 = sigma branch_name = 'Perryridge' (t2)
+pi customer.customer_name, customer.customer_city (t3)
