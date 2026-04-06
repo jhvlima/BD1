@@ -1,0 +1,4 @@
+pilotos = results ⨝ drivers
+circuitos = results ⨝ races ⨝ circuits
+pilotosEcircuitos = 
+pi drivers.forename, drivers.surname, circuits.name (pilotosEcircuitos)

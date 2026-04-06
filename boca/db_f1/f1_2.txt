@@ -1,0 +1,1 @@
+pi nationality (sigma positionOrder < 4 (drivers ⨝ results)) - pi nationality constructors

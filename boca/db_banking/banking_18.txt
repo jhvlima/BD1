@@ -1,0 +1,5 @@
+cliente = sigma (customer_name = 'Hayes') (customer)
+conta = cliente ⨝ depositor ⨝ account
+emprestimo = cliente ⨝ borrower ⨝ loan
+t = conta ⨝ emprestimo
+pi branch.branch_name, branch.branch_city (t ⨝ branch)

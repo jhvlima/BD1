@@ -1,0 +1,1 @@
+pi a.account_number (sigma a.balance < b.balance (ρa(account) x ρb(sigma branch_name = 'North Town' (account))))
