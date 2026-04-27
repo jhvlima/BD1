@@ -1,0 +1,2 @@
+nucleo = branch x rho bk_ass (pi assets (sigma branch_city = 'Brooklyn' (branch)))
+pi branch_name (sigma branch.assets > bk_ass.assets (nucleo))

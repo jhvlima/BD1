@@ -1,0 +1,12 @@
+/* Senna, Prost, Mansell, Piquet | (gps orderby name desc || null) & year = 1986
+*/
+corr86 = sigma year = 1986 races
+top1 = sigma positionOrder = 1 results
+base = corr86 ⨝ top1  ⨝ drivers
+
+senna_races = sigma surname = 'Senna' (base)
+Prost_races = sigma surname = 'Prost' (base)
+Mansell_races = sigma surname = 'Mansell' (base)
+Piquet_races = sigma surname = 'Piquet' (base)
+
+senna_races

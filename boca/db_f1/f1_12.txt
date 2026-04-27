@@ -1,0 +1,8 @@
+/* Piloto, Aparicoes orderby Aparicoes  
+*/
+cont_piloto = gamma driverId; count(raceId) → Aparicoes(results)
+tudo = drivers ⨝ cont_piloto
+res = pi (forename || ' ' || surname) → Piloto, Aparicoes(tudo)
+maxi = gamma max(Aparicoes) → record (res)
+
+pi Piloto, Aparicoes (sigma Aparicoes = record (res ⨯ maxi))

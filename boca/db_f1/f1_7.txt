@@ -1,0 +1,15 @@
+/* 1. Limpeza: Pega apenas as colunas necessárias e muda os nomes que dariam conflito */
+F = pi constructorId, name -> nome_equipe (sigma nationality = 'French' (constructors))
+V = pi constructorId, driverId, raceId (sigma positionOrder = 1(results))
+P = pi driverId, forename, surname (drivers)
+Corr = pi raceId, circuitId, year (races)
+Circ = pi circuitId, name -> nome_circuito (circuits)
+
+/* 2. O Miolo: Junta apenas as vitórias perfeitas com as tabelas já limpas */
+tudo = V ⨝ P ⨝ Corr ⨝ Circ
+
+/* 3. O Join Externo: Garante que os franceses perdedores continuem vivos (sempre no final!) */
+franceses_top1 = tudo ⟖ F
+
+/* 4. A Projeção Final */
+pi nome_equipe -> Equipe, (forename || ' ' || surname) -> Piloto, nome_circuito -> Circuito, year -> Ano (franceses_top1)

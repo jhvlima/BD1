@@ -1,0 +1,18 @@
+/* Equipe, Ano if sum(points) = 0
+*/
+
+equipes_zeradas = sigma (pontos = 0) gamma constructorId; sum(points) → pontos(constructors ⨝ results)
+
+/* Equipe, Ano if sum(points) = 0
+*/
+/* 1. Total de corridas por temporada */
+TotalCorridasAno = gamma year; count(raceId) → total_provas (races)
+/* 2. Quantas corridas cada equipe disputou por ano */
+corridasEquipe = gamma year, constructorId; count(raceId) → totalCorridas(results ⨝ races)
+/* 3. Soma de pontos por equipe por ano */
+equipes_zeradas = sigma (pontos = 0) gamma constructorId; sum(points) → pontos(constructors ⨝ results)
+
+/* 4. Cruzamento: disputou todas E pontos = 0 */
+/* 5. Nome da equipe e ano */
+equipes = pi name → Equipe (sigma constructors.constructorId = equipes_zeradas.constructorId (equipes_zeradas ⨝ constructors))
+pi year → Ano (equipes_zeradas ⨝ results ⨝ races)

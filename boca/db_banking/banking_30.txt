@@ -1,0 +1,1 @@
+gama branch_name; (account) AVG(balance) -> media

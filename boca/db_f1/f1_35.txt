@@ -1,0 +1,8 @@
+/* Piloto, Idade, GP, Temporada if top1 & orderby idade 
+*/
+
+base = drivers ⨝ sigma positionOrder = 1 results ⨝ races ⨝ gps
+res = pi (forename || ' ' || surname) → Piloto, year - (year(date(dob))) → Idade, gps.name → GP, year → Temporada base
+top = gamma max(Idade) -> Idade res
+res ⨝ top
+

@@ -1,0 +1,7 @@
+/* Piloto if max(self.pontos, temp) >= 4 
+*/
+pts_piloto_ano = gamma year, driverId; sum(points) → total_pts (results ⨝ races)
+melhores_pilotos = gamma year; max(total_pts) → max_pontos_pilotos(pts_piloto_ano)
+goats = sigma total_pts = max_pontos_pilotos (pts_piloto_ano ⨝ melhores_pilotos)
+count = gamma driverId; count(year) → titulos(goats)
+pi (forename || ' ' || surname) -> Piloto (sigma titulos >= 4 (count) ⨝ drivers)

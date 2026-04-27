@@ -1,0 +1,9 @@
+/* Equipe, Poles
+*/
+r = results ⨝  constructors
+
+res = gamma name; count(constructorId) → Poles (sigma grid = 1 (r))
+list = pi name → Equipe, Poles res
+ord = tau Poles desc, Equipe asc list
+final = sigma n <= 25 pi rownum() → n, Equipe, Poles ord
+pi Equipe, Poles final

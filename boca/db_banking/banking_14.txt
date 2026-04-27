@@ -1,0 +1,4 @@
+t1 = sigma customer.customer_name = borrower.customer_name (customer x borrower)
+t2 = sigma loan.loan_number = borrower.loan_number (t1 x loan)
+t3 = sigma branch_name = 'Perryridge' (t2)
+pi customer.customer_name, customer.customer_city (t3)

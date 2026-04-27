@@ -1,0 +1,1 @@
+pi customer_name ( sigma customer_name LIKE '%o%' or customer_city LIKE 'P%'(customer))

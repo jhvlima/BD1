@@ -1,1 +1,5 @@
-pi nationality (sigma positionOrder < 4 (drivers ⨝ results)) - pi nationality constructors
+/* nationality if constructors == null && drivers-positionOrder >= 3
+*/
+top3 = drivers ⨝ (sigma positionOrder <= 3 (results))
+
+pi nationality (top3) - pi nationality (constructors)

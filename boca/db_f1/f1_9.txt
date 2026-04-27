@@ -1,0 +1,4 @@
+/* MediaCorridas (raceId, year (races)) */
+total_ano = gamma year; count(raceId) → total(races)
+media = gamma avg(total) → MediaCorridas(total_ano)
+pi round(MediaCorridas) → MediaCorridas media
